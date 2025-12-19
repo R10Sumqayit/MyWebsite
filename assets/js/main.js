@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("Website Loaded Successfully [cite: 45]");
+    console.log("Website Loaded Successfully");
 
-    // Dynamic Greeting based on current time
     const greetingElement = document.getElementById("greeting");
     if (greetingElement) {
         const hour = new Date().getHours();
