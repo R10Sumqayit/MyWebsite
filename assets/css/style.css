@@ -1,80 +1,83 @@
-:root {
-    --bg-dark: #121212;
-    --card-bg: #1e1e1e;
-    --accent: #00d2ff;
-    --text: #ffffff;
-}
-
+/* General Styles */
 body {
+    font-family: Arial, sans-serif;
     margin: 0;
-    font-family: 'Inter', sans-serif;
-    background-color: var(--bg-dark);
-    color: var(--text);
+    padding: 0;
+    background-color: #ffffff; /* Ağ background */
+    color: #333;
+    text-align: left;
+}
+
+header {
+    background-color: #4a90e2; /* Mavi naviqasiya paneli */
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
-    background: rgba(0,0,0,0.9);
+nav ul li {
+    display: inline;
+    margin: 0 15px;
 }
 
-nav ul { display: flex; list-style: none; padding: 0; }
-nav ul li a { color: white; text-decoration: none; margin: 0 15px; font-weight: 600; }
-nav ul li a:hover { color: var(--accent); }
-
-/* --- PROFİL RESMİ AYARI --- */
-.profile-img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%; /* Tam daire yapar */
-    border: 4px solid var(--accent);
-    object-fit: cover; /* Resmin bozulmasını önler */
-    margin-bottom: 20px;
-}
-
-/* --- PROJE RESMİ AYARI (KÜÇÜK DAİRE) --- */
-.project-img-circle {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%; /* Tam daire yapar */
-    border: 3px solid var(--accent);
-    object-fit: cover;
-    margin: 0 auto 20px auto;
-    display: block;
-}
-
-.container { padding: 50px 20px; max-width: 800px; margin: auto; }
-.content-card, .project-card { 
-    background: var(--card-bg); 
-    padding: 30px; 
-    border-radius: 15px; 
-    margin-bottom: 30px;
-}
-
-.repo-btn {
-    display: inline-block;
-    padding: 12px 24px;
-    background: var(--accent);
-    color: black;
-    border-radius: 25px;
+nav ul li a {
+    color: white;
     text-decoration: none;
     font-weight: bold;
-    margin-top: 20px;
 }
 
-/* Sosyal Medya Linkleri */
-.social-icons a {
-    color: var(--accent);
+/* Container Styles */
+.home-container, .container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* Image Styles (Daire Şəkil) */
+.image-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.circle-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%; /* Tam daire */
+    border: 5px solid #4a90e2; /* Şəklin ətrafındakı mavi halqa */
+    object-fit: cover;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-icons a {
+    color: #4a90e2;
     margin: 0 10px;
     text-decoration: none;
-    font-weight: bold;
 }
 
-/* Mobil Uyumluluk */
+/* Responsive Design */
 @media (max-width: 600px) {
-    nav { flex-direction: column; }
-    nav ul { margin-top: 15px; }
+    .circle-img {
+        width: 180px;
+        height: 180px;
+    }
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
 }
